@@ -8,7 +8,9 @@ public:
 	Square() : Figura() {
 		this->size = 0;
 	}
-	Square(int size) : Figura(int x, int y) {
+	Square(int x, int y,int size){
+		this->x = x;
+		this->y = y;
 		this->size = size;
 	}
 

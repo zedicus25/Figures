@@ -139,12 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="Figura.cpp" />
+    <ClCompile Include="GreenCircle.cpp" />
+    <ClCompile Include="RedCircle.cpp" />
     <ClCompile Include="Square.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="Figura.h" />
+    <ClInclude Include="GreenCircle.h" />
+    <ClInclude Include="RedCircle.h" />
     <ClInclude Include="Square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
