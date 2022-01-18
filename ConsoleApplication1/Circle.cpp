@@ -1,12 +1,11 @@
 #include "Circle.h"
 
-Circle::Circle(int x, int y, int radius, const char* color)
+Circle::Circle(int x, int y, int radius, std::string color)
 {
 	this->x = x;
 	this->y = y;
 	this->radius = radius;
-	this->color = new char[strlen(color) + 1];
-	strcpy_s(this->color, strlen(color) + 1, color);
+	this->color = color;
 }
 
 Circle::Circle(Circle& tmp)
@@ -14,6 +13,20 @@ Circle::Circle(Circle& tmp)
 	this->x = tmp.getX();
 	this->y = tmp.getY();
 	this->radius = tmp.getRadius();
-	this->color = new char[strlen(tmp.getColor()) + 1];
-	strcpy_s(this->color, strlen(tmp.getColor()) + 1, tmp.getColor());
+	this->color = tmp.getColor();
 }
+
+std::string Circle::getInfo()
+{
+	std::string info;
+	info = "Color: ";
+	info += this->getColor();
+	info += " Radius: ";
+	info += std::to_string(this->getRadius());
+	info += " X: ";
+	info += std::to_string(this->getX());
+	info += " Y: ";
+	info += std::to_string(this->getY());
+	return info;
+}
+

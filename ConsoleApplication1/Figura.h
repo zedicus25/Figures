@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 class Figura
 {
 protected:
@@ -14,5 +15,7 @@ public:
 	int getY() const {
 		return this->y;
 	}
+	std::string getInfo();
+
 };
 

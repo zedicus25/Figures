@@ -1,26 +1,29 @@
 #pragma once
 #include "Figura.h"
-#include <iostream>
+#include <string>
 class Circle : public Figura
 {
 protected:
 	int radius;
-	char* color;
+	std::string color;
 public:
 	Circle() : Figura() {
 		this->radius = 0;
-		this->color = new char[0];
+		this->color = "None";
 	}
-	Circle(int x, int y, int radius, const char* color);
+	Circle(int x, int y, int radius, std::string color);
 	Circle(Circle& tmp);
 
 
 	inline int getRadius() const {
 		return this->radius;
 	}
-	inline char* getColor() const {
+	inline std::string getColor() const {
 		return this->color;
 	}
+
+	std::string getInfo();
+	
 
 };
 

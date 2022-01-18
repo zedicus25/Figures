@@ -20,5 +20,8 @@ public:
 	inline int calculateArea() const {
 		return this->getSize() * this->getSize();
 	}
+	std::string getInfo();
+
+	
 };
 

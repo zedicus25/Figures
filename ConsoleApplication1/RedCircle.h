@@ -5,16 +5,14 @@ class RedCircle : public Circle
 public:
 	RedCircle() : Circle()
 	{
-		this->color = new char[4];
-		strcpy_s(color, 4, "Red");
+		this->color = "Red";
 	}
 
 	RedCircle(int x, int y, int radius);
 	
 
-	inline char* getColor() const {
+	inline std::string getColor() const {
 		return this->color;
 	}
-
 };
 

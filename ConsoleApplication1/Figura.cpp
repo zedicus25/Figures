@@ -11,3 +11,13 @@ Figura::Figura(int x, int y)
 	this->x = x;
 	this->y = y;
 }
+ 
+std::string Figura::getInfo()
+{
+	std::string info;
+	info = " X: ";
+	info += this->getX();
+	info = " Y: ";
+	info += this->getY();
+	return info;
+}
