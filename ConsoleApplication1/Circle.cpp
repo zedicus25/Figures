@@ -16,17 +16,5 @@ Circle::Circle(Circle& tmp)
 	this->color = tmp.getColor();
 }
 
-std::string Circle::getInfo()
-{
-	std::string info;
-	info = "Color: ";
-	info += this->getColor();
-	info += " Radius: ";
-	info += std::to_string(this->getRadius());
-	info += " X: ";
-	info += std::to_string(this->getX());
-	info += " Y: ";
-	info += std::to_string(this->getY());
-	return info;
-}
+
 

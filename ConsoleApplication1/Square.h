@@ -20,7 +20,16 @@ public:
 	inline int calculateArea() const {
 		return this->getSize() * this->getSize();
 	}
-	std::string getInfo();
+	std::string getInfo() override {
+		std::string info;
+		info = " X: ";
+		info += std::to_string(this->getX());
+		info += " Y: ";
+		info += std::to_string(this->getY());
+		info += " Size: ";
+		info += std::to_string(this->getSize());
+		return info;
+	}
 
 	
 };
